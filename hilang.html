@@ -3,59 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Barang Hilang - Fasilkom</title>
+    <title>Barang Hilang - Lost or Found Fasilkom</title>
 </head>
 <body>
 
     <header>
-        <h1>Portal Lost & Found Fasilkom</h1>
+        <table width="100%">
+            <tr>
+                <td><strong>Fasilkom Lost & Found</strong></td>
+                <td align="right">
+                    <a href="home.html">Beranda</a> | 
+                    <a href="hilang.html">Lapor Hilang</a> | 
+                    <a href="ditemukan.html">Lapor Temu</a> | 
+                    <a href="status.html">Cek Status</a> | 
+                    <a href="profil.html">Login Admin</a>
+                </td>
+            </tr>
+        </table>
     </header>
-
-    <nav>
-        <a href="home.html">Beranda</a> | 
-        <a href="hilang.html">Barang Hilang</a> | 
-        <a href="ditemukan.html">Barang Ditemukan</a>
-    </nav>
     <hr>
 
     <div style="display: flex;">
-        <aside style="width: 200px; padding: 10px; background: #f4f4f4;">
-            <h3>Statistik</h3>
-            <ul>
-                <li>Total Hilang: 12</li>
-                <li>Total Ditemukan: 8</li>
-                <li>Selesai: 5</li>
-            </ul>
+        <aside style="width: 250px; padding: 20px; background: #f9f9f9;">
+            <h3>Filter</h3>
+            <form>
+                <label>Kategori:</label><br>
+                <select>
+                    <option>Semua</option>
+                    <option>Elektronik</option>
+                    <option>Dompet</option>
+                    <option>Dokumen</option>
+                </select>
+                <br><br>
+                <label>Lokasi:</label><br>
+                <input type="text" placeholder="Cari lokasi...">
+                <br><br>
+                <button type="submit">Terapkan Filter</button>
+            </form>
         </aside>
 
-        <main style="padding: 10px;">
-            <h2>Daftar Barang Hilang</h2>
-            <p>Halo <b>Username👋</b>, berikut adalah barang-barang yang sedang dicari:</p>
+        <main style="padding: 20px; flex-grow: 1;">
+            <h1>🔴 Daftar Barang Hilang</h1>
+            <p>Berikut adalah barang-barang yang dilaporkan hilang di lingkungan Fasilkom:</p>
 
-            <table border="1" cellpadding="10" cellspacing="0">
+            <table border="1" cellpadding="8" cellspacing="0" width="100%">
                 <thead>
-                    <tr>
-                        <th>No.</th> 
-                        <th>Nama Pemilik</th>  
+                    <tr bgcolor="#f2f2f2">
+                        <th>No</th>
+                        <th>Nama Barang</th>
                         <th>Kategori</th>
-                        <th>Ciri-ciri & Lokasi</th> 
-                        <th>Foto</th>
+                        <th>Lokasi Hilang</th>
+                        <th>Tanggal</th>
+                        <th>Pelapor</th>
                         <th>Kontak</th>
-                        <th>Aksi</th>
+                        <th>Foto</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Budi Santoso</td>
+                        <td>Flashdisk Sandisk 32GB</td>
                         <td>Elektronik</td>
-                        <td>Laptop Asus, Lab RPL</td>
-                        <td><img style="width: 80px;" src="laptop.jpg" alt="Laptop"></td>
+                        <td>Lab Jaringan</td>
+                        <td>10 Mar 2026</td>
+                        <td>Andi Saputra</td>
                         <td>08123456789</td>
-                        <td><button>Edit</button> <button>Selesai</button></td>
+                        <td><a href="#">Lihat</a></td>
+                        <td>🔍 Dicari</td>
                     </tr>
-                    </tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>Dompet Kulit Hitam</td>
+                        <td>Dompet</td>
+                        <td>Kantin</td>
+                        <td>09 Mar 2026</td>
+                        <td>Budi Santoso</td>
+                        <td>08234567890</td>
+                        <td><a href="#">Lihat</a></td>
+                        <td>🔍 Dicari</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>KTM An. Siti Aminah</td>
+                        <td>Dokumen</td>
+                        <td>Parkiran</td>
+                        <td>08 Mar 2026</td>
+                        <td>Siti Aminah</td>
+                        <td>08345678901</td>
+                        <td><a href="#">Lihat</a></td>
+                        <td>✅ Ditemukan</td>
+                    </tr>
+                </tbody>
             </table>
+
+            <p><i>*Status "Ditemukan" berarti barang sudah dikembalikan ke pemilik</i></p>
         </main>
     </div>
 

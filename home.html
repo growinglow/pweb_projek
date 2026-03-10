@@ -37,8 +37,9 @@
 
             <hr>
 
+            <!-- TUTORIAL SECTION -->
             <section id="tutorial">
-                <h2>Cara Melaporkan Barang</h2>
+                <h2>📘 Tutorial Cara Pakai</h2>
                 <p>Ikuti langkah-langkah berikut untuk melaporkan barang Anda:</p>
                 
                 <ol>
@@ -48,6 +49,73 @@
                     <li>Tunggu verifikasi dari Staff TU/Admin.</li>
                     <li>Jika ada kecocokan, Anda akan dihubungi oleh pihak terkait.</li>
                 </ol>
+            </section>
+
+            <hr>
+
+            <!-- FORM UPLOAD SECTION (LANGSUNG DI HOME) -->
+            <section id="upload">
+                <h2>📤 Form Laporan Barang</h2>
+                <p>Isi form di bawah untuk melaporkan barang <b>hilang</b> atau <b>ditemukan</b>:</p>
+
+                <form action="proses_laporan.html" method="post">
+                    <table border="0" cellpadding="8">
+                        <tr>
+                            <td><label for="nama">Nama Lengkap:</label></td>
+                            <td><input type="text" id="nama" name="nama" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="kontak">Kontak (WA/Email):</label></td>
+                            <td><input type="text" id="kontak" name="kontak" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="barang">Nama Barang:</label></td>
+                            <td><input type="text" id="barang" name="barang" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="kategori">Kategori:</label></td>
+                            <td>
+                                <select id="kategori" name="kategori">
+                                    <option>Elektronik</option>
+                                    <option>Dompet</option>
+                                    <option>Dokumen</option>
+                                    <option>Aksesoris</option>
+                                    <option>Lainnya</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="lokasi">Lokasi:</label></td>
+                            <td><input type="text" id="lokasi" name="lokasi" placeholder="Contoh: Lab Jaringan, Kantin, dll" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="deskripsi">Deskripsi:</label></td>
+                            <td><textarea id="deskripsi" name="deskripsi" rows="3" cols="30" placeholder="Ciri-ciri khusus, isi dompet, dll" required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="foto">Upload Foto:</label></td>
+                            <td><input type="file" id="foto" name="foto" accept="image/*"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Jenis Laporan:</label></td>
+                            <td>
+                                <input type="radio" id="hilang" name="jenis" value="hilang" checked>
+                                <label for="hilang">🔴 Barang Hilang</label>
+                                <br>
+                                <input type="radio" id="ditemukan" name="jenis" value="ditemukan">
+                                <label for="ditemukan">🟢 Barang Ditemukan</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="right">
+                                <hr>
+                                <button type="submit">Kirim Laporan</button>
+                                <button type="reset">Reset</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <p><i>*Laporan akan diverifikasi admin sebelum muncul di tabel</i></p>
             </section>
         </main>
     </div>

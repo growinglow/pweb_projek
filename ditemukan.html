@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lapor Barang Ditemukan - Fasilkom</title>
+    <title>Barang Ditemukan - Lost or Found Fasilkom</title>
 </head>
 <body>
 
@@ -24,72 +24,86 @@
     <hr>
 
     <div style="display: flex;">
-        <aside style="width: 250px; padding: 20px; background: #f9f9f9; border-right: 1px solid #ccc;">
-            <h3>Statistik Sistem</h3>
-            <p>Total Barang: 50</p>
-            <p>Barang Kembali: 42</p>
-            <p>User Aktif: 120</p>
+        <aside style="width: 250px; padding: 20px; background: #f9f9f9;">
+            <h3>Filter</h3>
+            <form>
+                <label>Kategori:</label><br>
+                <select>
+                    <option>Semua</option>
+                    <option>Elektronik</option>
+                    <option>Dompet</option>
+                    <option>Dokumen</option>
+                </select>
+                <br><br>
+                <label>Lokasi:</label><br>
+                <input type="text" placeholder="Cari lokasi...">
+                <br><br>
+                <button type="submit">Terapkan Filter</button>
+            </form>
         </aside>
 
         <main style="padding: 20px; flex-grow: 1;">
-            <h1>Lapor Penemuan Barang</h1>
-            <p>Silakan lengkapi data barang yang Anda temukan:</p>
+            <h1>🟢 Daftar Barang Ditemukan</h1>
+            <p>Barang-barang berikut ditemukan oleh warga Fasilkom. Apakah ada barangmu?</p>
 
-            <form action="#" method="POST" enctype="multipart/form-data">
-                
-                <fieldset>
-                    <legend>Data Penemu & Barang</legend>
-                    <p>
-                        <label>Kode Barang (ID unik):</label><br>
-                        <input type="text" name="kode" required placeholder="Contoh: B-001">
-                    </p>
-                    <p>
-                        <label>Nama Barang:</label><br>
-                        <input type="text" name="nama" required placeholder="Contoh: Kunci Motor">
-                    </p>
-                    <p>
-                        <label>Kategori:</label><br>
-                        <select name="kategori">
-                            <option value="elektronik">Elektronik</option>
-                            <option value="aksesoris">Aksesoris</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label>Jumlah & Satuan:</label><br>
-                        <input type="number" name="jumlah" value="1">
-                        <input type="text" name="satuan" placeholder="misal: buah/unit">
-                    </p>
-                    <p>
-                        <label>Estimasi Nilai Barang:</label><br>
-                        <input type="number" name="harga" placeholder="dalam Rupiah">
-                    </p>
-                    <p>
-                        <label>Tanggal Ditemukan:</label><br>
-                        <input type="date" name="tgl" required>
-                    </p>
-                    <p>
-                        <label>Lokasi Penemuan (Supplier):</label><br>
-                        <input type="text" name="supplier" placeholder="Lab RPL / Kantin">
-                    </p>
-                    <p>
-                        <label>Foto Barang:</label><br>
-                        <input type="file" name="foto" accept="image/*">
-                    </p>
-                    <p>
-                        <label>Keterangan Tambahan:</label><br>
-                        <textarea name="keterangan" rows="3"></textarea>
-                    </p>
-                </fieldset>
+            <table border="1" cellpadding="8" cellspacing="0" width="100%">
+                <thead>
+                    <tr bgcolor="#f2f2f2">
+                        <th>No</th>
+                        <th>Nama Barang</th>
+                        <th>Kategori</th>
+                        <th>Lokasi Ditemukan</th>
+                        <th>Tanggal</th>
+                        <th>Penemu</th>
+                        <th>Kontak</th>
+                        <th>Foto</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Laptop ASUS ROG</td>
+                        <td>Elektronik</td>
+                        <td>Lab Komputer</td>
+                        <td>10 Mar 2026</td>
+                        <td>Rina Wijaya</td>
+                        <td>081212341234</td>
+                        <td><a href="#">Lihat</a></td>
+                        <td><button>Ini Barang Saya</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jam Tangan Casio</td>
+                        <td>Aksesoris</td>
+                        <td>Musholla</td>
+                        <td>09 Mar 2026</td>
+                        <td>Fajar Hidayat</td>
+                        <td>085678901234</td>
+                        <td><a href="#">Lihat</a></td>
+                        <td><button>Ini Barang Saya</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Kacamata Hitam</td>
+                        <td>Aksesoris</td>
+                        <td>Parkiran Motor</td>
+                        <td>07 Mar 2026</td>
+                        <td>Dewi Lestari</td>
+                        <td>087890123456</td>
+                        <td><a href="#">Lihat</a></td>
+                        <td><button disabled>Sudah Diambil</button></td>
+                    </tr>
+                </tbody>
+            </table>
 
-                <br>
-                <button type="submit">Posting Penemuan</button>
-            </form>
+            <p><i>Klik "Ini Barang Saya" untuk memulai proses verifikasi kepemilikan.</i></p>
         </main>
     </div>
 
-    <hr>
     <footer>
-        <p><small>&copy; 2026 Lost or Found Fasilkom Jember</small></p>
+        <hr>
+        <p><small>&copy; 2026 Proyek Pemrograman Web Fasilkom Jember</small></p>
     </footer>
 
 </body>
