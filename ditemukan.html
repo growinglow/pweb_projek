@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lapor Barang Ditemukan - Fasilkom</title>
+</head>
+<body>
+
+    <header>
+        <table width="100%">
+            <tr>
+                <td><strong>Fasilkom Lost & Found</strong></td>
+                <td align="right">
+                    <a href="home.html">Beranda</a> | 
+                    <a href="hilang.html">Lapor Hilang</a> | 
+                    <a href="ditemukan.html">Lapor Temu</a> | 
+                    <a href="status.html">Cek Status</a> | 
+                    <a href="profil.html">Login Admin</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <hr>
+
+    <div style="display: flex;">
+        <aside style="width: 250px; padding: 20px; background: #f9f9f9; border-right: 1px solid #ccc;">
+            <h3>Statistik Sistem</h3>
+            <p>Total Barang: 50</p>
+            <p>Barang Kembali: 42</p>
+            <p>User Aktif: 120</p>
+        </aside>
+
+        <main style="padding: 20px; flex-grow: 1;">
+            <h1>Lapor Penemuan Barang</h1>
+            <p>Silakan lengkapi data barang yang Anda temukan:</p>
+
+            <form action="#" method="POST" enctype="multipart/form-data">
+                
+                <fieldset>
+                    <legend>Data Penemu & Barang</legend>
+                    <p>
+                        <label>Kode Barang (ID unik):</label><br>
+                        <input type="text" name="kode" required placeholder="Contoh: B-001">
+                    </p>
+                    <p>
+                        <label>Nama Barang:</label><br>
+                        <input type="text" name="nama" required placeholder="Contoh: Kunci Motor">
+                    </p>
+                    <p>
+                        <label>Kategori:</label><br>
+                        <select name="kategori">
+                            <option value="elektronik">Elektronik</option>
+                            <option value="aksesoris">Aksesoris</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>Jumlah & Satuan:</label><br>
+                        <input type="number" name="jumlah" value="1">
+                        <input type="text" name="satuan" placeholder="misal: buah/unit">
+                    </p>
+                    <p>
+                        <label>Estimasi Nilai Barang:</label><br>
+                        <input type="number" name="harga" placeholder="dalam Rupiah">
+                    </p>
+                    <p>
+                        <label>Tanggal Ditemukan:</label><br>
+                        <input type="date" name="tgl" required>
+                    </p>
+                    <p>
+                        <label>Lokasi Penemuan (Supplier):</label><br>
+                        <input type="text" name="supplier" placeholder="Lab RPL / Kantin">
+                    </p>
+                    <p>
+                        <label>Foto Barang:</label><br>
+                        <input type="file" name="foto" accept="image/*">
+                    </p>
+                    <p>
+                        <label>Keterangan Tambahan:</label><br>
+                        <textarea name="keterangan" rows="3"></textarea>
+                    </p>
+                </fieldset>
+
+                <br>
+                <button type="submit">Posting Penemuan</button>
+            </form>
+        </main>
+    </div>
+
+    <hr>
+    <footer>
+        <p><small>&copy; 2026 Lost or Found Fasilkom Jember</small></p>
+    </footer>
+
+</body>
+</html>

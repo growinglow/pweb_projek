@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrasi Akun - NEMUin</title>
+</head>
+<body>
+    <main>
+        <header><h1>Buat akunmu</h1></header>
+        
+        <form action="proses_register.php" method="POST">
+            <p>Website Lost Or Found</p>
+            
+            <div class="field">
+                <label for="nama">Nama Lengkap</label><br>
+                <input type="text" placeholder="Contoh: Helen Soraya" name="nama" id="nama" required>
+            </div>
+            
+            <div class="field">
+                <label for="username">Username (NIM/NID)</label><br>
+                <input type="text" placeholder="Masukkan ID" name="username" id="username" required>
+            </div>
+            
+            <div class="field">
+                <label>Daftar Sebagai:</label><br>
+                <select name="role" required>
+                    <option value="mahasiswa">Mahasiswa</option>
+                    <option value="admin">Staff TU/Admin</option>
+                </select>
+            </div>
+            
+            <div class="field">
+                <label for="password">Password</label><br>
+                <input type="password" placeholder="Masukkan Password" name="password" id="password" required>
+            </div>
+            
+            <div class="field">
+                <button type="submit" name="submit">Register</button>
+            </div>
+            
+            <div class="links">
+                Sudah memiliki akun? <a href="login.html">Ke halaman login</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
