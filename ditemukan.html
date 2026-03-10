@@ -15,7 +15,6 @@
                     <a href="home.html">Beranda</a> | 
                     <a href="hilang.html">Lapor Hilang</a> | 
                     <a href="ditemukan.html">Lapor Temu</a> | 
-                    <a href="status.html">Cek Status</a> | 
                     <a href="profil.html">Login Admin</a>
                 </td>
             </tr>
@@ -24,26 +23,9 @@
     <hr>
 
     <div style="display: flex;">
-        <aside style="width: 250px; padding: 20px; background: #f9f9f9;">
-            <h3>Filter</h3>
-            <form>
-                <label>Kategori:</label><br>
-                <select>
-                    <option>Semua</option>
-                    <option>Elektronik</option>
-                    <option>Dompet</option>
-                    <option>Dokumen</option>
-                </select>
-                <br><br>
-                <label>Lokasi:</label><br>
-                <input type="text" placeholder="Cari lokasi...">
-                <br><br>
-                <button type="submit">Terapkan Filter</button>
-            </form>
-        </aside>
 
         <main style="padding: 20px; flex-grow: 1;">
-            <h1>🟢 Daftar Barang Ditemukan</h1>
+            <h1>Daftar Barang Ditemukan</h1>
             <p>Barang-barang berikut ditemukan oleh warga Fasilkom. Apakah ada barangmu?</p>
 
             <table border="1" cellpadding="8" cellspacing="0" width="100%">
@@ -57,20 +39,20 @@
                         <th>Penemu</th>
                         <th>Kontak</th>
                         <th>Foto</th>
-                        <th>Aksi</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Laptop ASUS ROG</td>
+                        <td>Laptop ASUS</td>
                         <td>Elektronik</td>
                         <td>Lab Komputer</td>
                         <td>10 Mar 2026</td>
-                        <td>Rina Wijaya</td>
+                        <td>Rina</td>
                         <td>081212341234</td>
                         <td><a href="#">Lihat</a></td>
-                        <td><button>Ini Barang Saya</button></td>
+                        <td>🔍 Dalam proses</td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -78,10 +60,11 @@
                         <td>Aksesoris</td>
                         <td>Musholla</td>
                         <td>09 Mar 2026</td>
-                        <td>Fajar Hidayat</td>
-                        <td>085678901234</td>
+                        <td>Dayat</td>
+                        <td>08526811234</td>
                         <td><a href="#">Lihat</a></td>
-                        <td><button>Ini Barang Saya</button></td>
+                        <td>Selesai</td>
+
                     </tr>
                     <tr>
                         <td>3</td>
@@ -89,22 +72,37 @@
                         <td>Aksesoris</td>
                         <td>Parkiran Motor</td>
                         <td>07 Mar 2026</td>
-                        <td>Dewi Lestari</td>
-                        <td>087890123456</td>
+                        <td>Dewi</td>
+                        <td>087892628456</td>
                         <td><a href="#">Lihat</a></td>
-                        <td><button disabled>Sudah Diambil</button></td>
+                        <td>Selesai</td>
                     </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Mouse laptop</td>
+                        <td>Elektronik</td>
+                        <td>Ruang kelas A3.5</td>
+                        <td>16 Jan 2026</td>
+                        <td>Jena</td>
+                        <td>08392279387</td>
+                        <td><a href="#">Lihat</a></td>
+                        <td>Selesai</td>
+                    </tr>                    
+                    <tr>
+                        <td>5</td>
+                        <td>Cas Laptop Toshiba</td>
+                        <td>Elektronik</td>
+                        <td>Sebelah B1/B2</td>
+                        <td>24 Jan 2026</td>
+                        <td>Putri</td>
+                        <td>083928347820</td>
+                        <td><a href="#">Lihat</a></td>
+                        <td>🔍 Dalam proses</td>
+                    </tr>  
                 </tbody>
             </table>
-
-            <p><i>Klik "Ini Barang Saya" untuk memulai proses verifikasi kepemilikan.</i></p>
         </main>
     </div>
-
-    <footer>
-        <hr>
-        <p><small>&copy; 2026 Proyek Pemrograman Web Fasilkom Jember</small></p>
-    </footer>
 
 </body>
 </html>
