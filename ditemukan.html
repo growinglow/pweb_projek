@@ -2,131 +2,140 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daftar Barang Ditemukan - Sistem Informasi Lost & Found Fasilkom">
     <link rel="stylesheet" href="style.css">
     <title>Barang Ditemukan - Lost or Found Fasilkom</title>
 </head>
 <body>
-
     <header>
-        <h1>Fasilkom Lost & Found</h1>
-        <p>Sistem Informasi Barang Hilang dan Temuan Fakultas Ilmu Komputer</p>
-        
+        <div class="brand">
+            <h1>Fasilkom Lost &amp; Found</h1>
+            <p>Sistem Informasi Barang Hilang dan Temuan Fakultas Ilmu Komputer</p>
+        </div>
         <nav>
             <ul>
                 <li><a href="home.html">Beranda</a></li>
                 <li><a href="hilang.html">Lapor Hilang</a></li>
-                <li><a href="ditemukan.html">Lapor Temu</a></li>
+                <li><a href="ditemukan.html" class="active">Lapor Temu</a></li>
                 <li><a href="profil.html">Login Admin</a></li>
             </ul>
         </nav>
-        <hr>
     </header>
-
-    <div style="display: flex; gap: 20px;">
-        <aside style="flex: 1; background-color: #f9f9f9; padding: 15px;">
-            <h3>Statistik</h3>
-            <ul>
-                <li>Total Barang Ditemukan: 5</li>
-                <li>Sudah Dikembalikan: 3</li>
-                <li>Dalam Proses: 2</li>
-            </ul>
-            <h3>Tips & Panduan</h3>
-            <p>Jika barang Anda ada dalam daftar, segera hubungi penemu atau staff TU untuk verifikasi kepemilikan.</p>
-        </aside>
-        
-        <main style="flex: 3;">
-            <h1>Daftar Barang Ditemukan</h1>
-            <p>Barang-barang berikut ditemukan oleh warga Fasilkom. Apakah ada barangmu?</p>
-
-            <table border="1" cellpadding="8" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama Barang</th>
-                        <th>Kategori</th>
-                        <th>Lokasi Ditemukan</th>
-                        <th>Tanggal</th>
-                        <th>Penemu</th>
-                        <th>Kontak</th>
-                        <th>Foto</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Laptop ASUS ROG</td>
-                        <td>Elektronik</td>
-                        <td>Lab Komputer</td>
-                        <td>10 Mar 2026</td>
-                        <td>Rina</td>
-                        <td>081212341234</td>
-                        <td><img src="gambar/asus.png" alt="Foto laptop ASUS ROG warna hitam" width="100"></td>
-                        <td>🔍 Dalam Proses</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jam Tangan Casio</td>
-                        <td>Aksesoris</td>
-                        <td>Musholla</td>
-                        <td>09 Mar 2026</td>
-                        <td>Adam</td>
-                        <td>08526811234</td>
-                        <td><img src="gambar/jam.jpg" alt="Foto jam tangan Casio warna silver" width="100"></td>
-                        <td>✅ Selesai</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Kacamata Hitam</td>
-                        <td>Aksesoris</td>
-                        <td>Parkiran Motor</td>
-                        <td>07 Mar 2026</td>
-                        <td>Dewi</td>
-                        <td>087892628456</td>
-                        <td><img src="gambar/kacamata.jpg" alt="Foto kacamata hitam frame tebal" width="100"></td>
-                        <td>✅ Selesai</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Mouse Wireless</td>
-                        <td>Elektronik</td>
-                        <td>Ruang Kelas A3.5</td>
-                        <td>16 Jan 2026</td>
-                        <td>Jena</td>
-                        <td>08392279387</td>
-                        <td><img src="gambar/mouse.jpg" alt="Foto mouse wireless warna putih" width="100"></td>
-                        <td>✅ Selesai</td>
-                    </tr>                    
-                    <tr>
-                        <td>5</td>
-                        <td>Charger Laptop Toshiba</td>
-                        <td>Elektronik</td>
-                        <td>Sebelah Gedung B1/B2</td>
-                        <td>24 Jan 2026</td>
-                        <td>Putri</td>
-                        <td>083928347820</td>
-                        <td><img src="gambar/cas.jpg" alt="Foto charger laptop Toshiba warna hitam" width="100"></td>
-                        <td>🔍 Dalam Proses</td>
-                    </tr>  
-                </tbody>
-            </table>
-
-            <section>
-                <h2>Informasi Status</h2>
+    <div class="wrapper">
+         <aside>
+            <div class="card">
+                <h3>Statistik</h3>
                 <ul>
-                    <li><b>🔍 Dalam Proses</b> : Barang sedang dalam proses verifikasi klaim</li>
-                    <li><b>✅ Selesai</b> : Barang sudah dikembalikan ke pemilik</li>
+                    <li>Total Barang Ditemukan: <strong>4</strong></li>
+                    <li>Sudah Dikembalikan: <strong>3</strong></li>
+                    <li>Dalam Proses: <strong>2</strong></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Tips &amp; Panduan</h3>
+                <p>Jika barang Anda ada dalam daftar, segera hubungi pelapor atau staff TU untuk verifikasi kepemilikan.</p>
+            </div>
+        </aside>
+        <main>
+            <section class="card">
+                <h2>Daftar Barang Ditemukan</h2>
+                <p>Barang-barang berikut ditemukan oleh warga Fasilkom. Apakah ada barangmu?</p>
+            </section>
+            <section class="card" id="tabel-barang">
+                <h2>Data Barang Ditemukan</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Barang</th>
+                                <th>Deskripsi</th>
+                                <th>Lokasi Ditemukan</th>
+                                <th>Tanggal</th>
+                                <th>Penemu</th>
+                                <th>Kontak</th>
+                                <th>Foto</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Laptop ASUS ROG</td>
+                                <td>Elektronik</td>
+                                <td>Lab Komputer</td>
+                                <td><time datetime="2026-03-10">10 Mar 2026</time></td>
+                                <td>Rina</td>
+                                <td>081212341234</td>
+                                <td><img src="gambar/asus.png" alt="Foto laptop ASUS ROG warna hitam" width="80"></td>
+                                <td><span class="badge badge-proses">Dalam Proses</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jam Tangan Casio</td>
+                                <td>Aksesoris</td>
+                                <td>Musholla</td>
+                                <td><time datetime="2026-03-09">09 Mar 2026</time></td>
+                                <td>Adam</td>
+                                <td>08526811234</td>
+                                <td><img src="gambar/jam.jpg" alt="Foto jam tangan Casio warna silver" width="80"></td>
+                                <td><span class="badge badge-selesai">Selesai</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Kacamata Hitam</td>
+                                <td>Aksesoris</td>
+                                <td>Parkiran Motor</td>
+                                <td><time datetime="2026-03-07">07 Mar 2026</time></td>
+                                <td>Dewi</td>
+                                <td>087892628456</td>
+                                <td><img src="gambar/kacamata.jpg" alt="Foto kacamata hitam frame tebal" width="80"></td>
+                                <td><span class="badge badge-selesai">Selesai</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Mouse Wireless</td>
+                                <td>Elektronik</td>
+                                <td>Ruang Kelas A3.5</td>
+                                <td><time datetime="2026-01-16">16 Jan 2026</time></td>
+                                <td>Jena</td>
+                                <td>08392279387</td>
+                                <td><img src="gambar/mouse.jpg" alt="Foto mouse wireless warna putih" width="80"></td>
+                                <td><span class="badge badge-selesai">Selesai</span></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Cas Lptop hp</td>
+                                <td>Elektronik</td>
+                                <td>Sebelah Gedung B1/B2</td>
+                                <td><time datetime="2026-01-24">24 Jan 2026</time></td>
+                                <td>Putri</td>
+                                <td>083928347820</td>
+                                <td><img src="gambar/cas.jpg" alt="Foto charger laptop Toshiba warna hitam" width="80"></td>
+                                <td><span class="badge badge-proses">Dalam Proses</span></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="9">Total: 5 barang &mdash; 3 selesai, 2 dalam proses</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+            <section class="card" id="keterangan-status">
+                <h2>ℹKeterangan Status</h2>
+                <ul class="status-list">
+                    <li><strong>Dalam Proses</strong> &mdash; Barang sedang dalam proses verifikasi klaim</li>
+                    <li><strong>Selesai</strong> &mdash; Barang sudah dikembalikan ke pemilik</li>
                 </ul>
             </section>
         </main>
-
-    </div> 
-
+    </div>
     <footer>
-        <hr>
         <p>&copy; 2026 Proyek Pemrograman Web Fasilkom Jember</p>
         <p><small>Dibuat untuk memenuhi tugas mata kuliah Pemrograman Web</small></p>
     </footer>
-
 </body>
 </html>

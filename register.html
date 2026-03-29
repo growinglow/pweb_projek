@@ -2,37 +2,61 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register - Fasilkom Lost & Found">
     <link rel="stylesheet" href="style.css">
-    <title>Registrasi Akun - NEMUin</title>
+    <title>Register - Lost or Found Fasilkom</title>
 </head>
-<body>
-    <main>
-        <header><h1>Buat akunmu</h1></header>        
-            <p>Website Lost Or Found</p>
-            
-            <div class="field">
-                <label for="nama">Nama Lengkap</label><br>
-                <input type="text" placeholder="Contoh: Helen Soraya" name="nama" id="nama" required>
+<body class="auth-page">
+    <main class="auth-wrapper">
+        <div class="auth-card">
+             <div class="auth-brand">
+                <h1>Fasilkom Lost &amp; Found</h1>
+                <p>Buat akun baru</p>
             </div>
-            
-            <div class="field">
-                <label for="username">Username (NIM/NID)</label><br>
-                <input type="text" placeholder="Masukkan ID" name="username" id="username" required>
+            <form action="#" method="post" class="auth-form">
+                <fieldset class="auth-fieldset">
+                    <legend>Data Diri</legend>
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama"
+                               placeholder="Masukkan nama lengkap"
+                               minlength="3" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="nim">NIM</label>
+                        <input type="text" id="nim" name="nim"
+                               placeholder="Contoh: 232410101001"
+                               pattern="[0-9]{12}" maxlength="12"
+                               title="NIM harus 12 digit angka" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="nama@student.unej.ac.id" required>
+                    </div>
+                </fieldset>
+                <fieldset class="auth-fieldset">
+                    <legend>Keamanan Akun</legend>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password"
+                               placeholder="Minimal 8 karakter"
+                               minlength="8" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="konfirmasi">Konfirmasi Password</label>
+                        <input type="password" id="konfirmasi" name="konfirmasi"
+                               placeholder="Ulangi password" required>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn-auth">Daftar Sekarang</button>
+            </form>
+            <div class="auth-footer">
+                <p>Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
             </div>
-            
-            <div class="field">
-                <label for="password">Password</label><br>
-                <input type="password" placeholder="Masukkan Password" name="password" id="password" required>
-            </div>
-            
-            <div class="field">
-                <button type="submit" name="submit">Register</button>
-            </div>
-            
-            <div class="links">
-                Sudah memiliki akun? <a href="login.html">Ke halaman login</a>
-            </div>
-        </form>
+ 
+        </div>
     </main>
 </body>
 </html>
