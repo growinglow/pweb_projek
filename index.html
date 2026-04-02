@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistem Informasi Barang Hilang dan Temuan Fasilkom">
+    <link rel="stylesheet" href="style.css">
+    <title>Beranda - Lost or Found Fasilkom</title>
+</head>
+<body>
+     <header>
+        <div class="brand">
+            <h1>Fasilkom Lost &amp; Found</h1>
+            <p>Sistem Informasi Barang Hilang dan Temuan Fakultas Ilmu Komputer</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Beranda</a></li>
+                <li><a href="hilang.html">Lapor Hilang</a></li>
+                <li><a href="ditemukan.html">Lapor Temuan</a></li>
+                <li><a href="profil.html">Login Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+         <aside>
+            <div class="card">
+                <h3>Statistik</h3>
+                <ul>
+                    <li>Total Barang Ditemukan: <strong>4</strong></li>
+                    <li>Total Barang Hilang: <strong>5</strong></li>
+                    <li>Sudah Dikembalikan: <strong>3</strong></li>
+                    <li>Dalam Proses: <strong>2</strong></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Tips &amp; Panduan</h3>
+                <p>Jika barang Anda ada dalam daftar, segera hubungi pelapor atau staff TU untuk verifikasi kepemilikan.</p>
+            </div>
+        </aside>
+         <main>
+             <section class="card">
+                <h2>Selamat Datang di Website Lost & Found Fasilkom!</h2>
+                <p>Halo <strong>Username 👋</strong>, situs ini membantu mahasiswa dan dosen melaporkan barang hilang maupun barang yang ditemukan di lingkungan Fasilkom.</p>
+            </section>
+             <section class="card" id="tutorial">
+                <h2>Tutorial Cara Penggunaan</h2>
+                <ol>
+                    <li>Login ke sistem menggunakan NIM</li>
+                    <li>Pilih menu <em>"Lapor Hilang"</em> atau <em>"Lapor Temu"</em></li>
+                    <li>Isi formulir dengan detail selengkap mungkin</li>
+                </ol>
+            </section>
+             <section class="card" id="upload">
+                <h2>Form Laporan Barang</h2>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Data Pelapor</legend>
+ 
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="kontak">Kontak WA</label>
+                            <input type="text" id="kontak" name="kontak" placeholder="Contoh: 08xx" required>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Detail Barang</legend>
+                        <div class="form-group">
+                            <label for="barang">Nama Barang:</label>
+                            <input type="text" id="barang" name="barang" placeholder="Contoh: Dompet coklat, Laptop ASUS" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="deskripsi">Deskripsi:</label>
+                            <textarea id="deskripsi" name="deskripsi" rows="3" placeholder="Ciri-ciri khusus, isi dompet, warna, dll" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="lokasi">Lokasi:</label>
+                            <input type="text" id="lokasi" name="lokasi" placeholder="Contoh: Lab RPL, Kantin, Ruang B1/B2" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal Lapor:</label>
+                            <input type="date" id="tanggal" name="tanggal" required>
+                        </div>                        
+                        <div class="form-group">
+                            <label for="foto">Upload Foto:</label>
+                            <input type="file" id="foto" name="foto" accept="image/*">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Jenis Laporan</legend>
+                        <div class="form-group radio-group">
+                            <label>
+                                <input type="radio" name="jenis" value="hilang" required>
+                                Barang Hilang
+                            </label>
+                            <label>
+                                <input type="radio" name="jenis" value="ditemukan">
+                                Barang Ditemukan
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="btn-group">
+                        <button type="submit" class="btn-primary">Kirim Laporan</button>
+                        <button type="reset" class="btn-reset">Reset</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <hr>
+        <p>&copy; 2026 Proyek Pemrograman Web Fasilkom Jember</p>
+        <p><small>Dibuat untuk memenuhi tugas mata kuliah Pemrograman Web</small></p>
+    </footer>
+</body>
+</html>
