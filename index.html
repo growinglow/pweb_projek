@@ -8,12 +8,9 @@
     <title>Beranda - Lost or Found Fasilkom</title>
 </head>
 <body>
-    <script>
-        console.log('Halaman dimuat!');
-    </script>    
-     <header>
+    <header>
         <div class="brand">
-            <h1>Fasilkom Lost &amp; Found</h1>
+            <h1>NemuIn by FASILKOM</h1>
             <p>Sistem Informasi Barang Hilang dan Temuan Fakultas Ilmu Komputer</p>
         </div>
         <nav>
@@ -23,100 +20,113 @@
                 <li><a href="ditemukan.html">Lapor Temuan</a></li>
                 <li><a href="profil.html">Profil</a></li>
             </ul>
-        </nav>
-    </header>
-    <div class="wrapper">
-         <aside>
+        </nav>           
+    </header>       
+
+    <div class="welcome">
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>        
+        <div class="text-welcome welcome-inner">
+            <div class="content">
+                <span class="badge">Fakultas Ilmu Komputer - Universitas Jember</span>
+                <h1>Selamat Datang di Website <em>NemuIn</em>!</h1>
+                <p>Halo <strong>Username 👋</strong>, situs ini membantu mahasiswa dan dosen melaporkan barang hilang maupun barang yang ditemukan di lingkungan Fasilkom.</p>
+            </div>
+        </div>
+    </div>    
+    <section class="layout-bawah">
+        <aside class="sidebar">
             <div class="card">
                 <h3>Statistik</h3>
                 <ul>
-                    <li>Total Barang Ditemukan: <strong>4</strong></li>
-                    <li>Total Barang Hilang: <strong>5</strong></li>
-                    <li>Sudah Dikembalikan: <strong>3</strong></li>
-                    <li>Dalam Proses: <strong>2</strong></li>
+                    <li>Total Lprn Brg Temuan: <strong id="stat-ditemukan">0</strong></li>
+                    <li>Total Lprn Brg Hilang: <strong id="stat-hilang">0</strong></li>
+                    <li>Dalam Proses: <strong id="stat-proses">0</strong></li>
+                    <li>Selesai: <strong id="stat-dikembalikan">0</strong></li>
                 </ul>
             </div>
             <div class="card">
                 <h3>Tips &amp; Panduan</h3>
                 <p>Jika barang Anda ada dalam daftar, segera hubungi pelapor atau staff TU untuk verifikasi kepemilikan.</p>
             </div>
-        </aside>
-         <main>
-             <section class="card">
-                <h2>Selamat Datang di Website Lost & Found Fasilkom!</h2>
-                <p>Halo <strong>Username 👋</strong>, situs ini membantu mahasiswa dan dosen melaporkan barang hilang maupun barang yang ditemukan di lingkungan Fasilkom.</p>
-            </section>
-             <section class="card" id="tutorial">
-                <h2>Tutorial Cara Penggunaan</h2>
-                <ol>
-                    <li>Login ke sistem menggunakan NIM</li>
-                    <li>Pilih menu <em>"Lapor Hilang"</em> atau <em>"Lapor Temu"</em></li>
-                    <li>Isi formulir dengan detail selengkap mungkin</li>
-                </ol>
-            </section>
-             <section class="card" id="upload">
-                <h2>Form Laporan Barang</h2>
-                <form action="#" method="post" enctype="multipart/form-data">
-                    <fieldset>
-                        <legend>Data Pelapor</legend>
- 
-                        <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+        </aside>         
+        <div class="wrapper">
+            <main class="main-content">  
+                <section class="card" id="tutorial">
+                    <h2>Tutorial Cara Menggunakan Website NemuIn</h2>
+                    <ol>
+                        <li>Login ke sistem menggunakan NIM</li>
+                        <li>Pilih menu <em>"Lapor Hilang"</em> atau <em>"Lapor Temu"</em></li>
+                        <li>Isi formulir dengan detail selengkap mungkin</li>
+                    </ol>
+                </section>
+                <section class="card" id="upload">
+                    <h2>Form Laporan Barang</h2>
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <fieldset>
+                            <legend>Data Pelapor</legend>
+    
+                            <div class="form-group">
+                                <label for="nama">Nama<span class="required">*</span></label>
+                                <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="kontak">Kontak WA<span class="required">*</span></label>
+                                <input type="text" id="kontak" name="kontak" placeholder="Contoh: 08xx" required>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Detail Barang</legend>
+                            <div class="form-group">
+                                <label for="barang">Barang<span class="required">*</span></label>
+                                <input type="text" id="barang" name="barang" placeholder="Contoh: Dompet coklat, Laptop ASUS" required>
+                            </div>                    
+                            <div class="form-group">
+                                <label for="status">Status<span class="required">*</span></label>
+                                <select id="status" name="status" required>
+                                    <option value="">-- Pilih Status --</option>
+                                    <option value="Dicari">Dicari (untuk barang hilang)</option>
+                                    <option value="Dalam Proses">Dalam Proses (untuk barang ditemukan)</option>
+                                    <option value="Ditemukan">Ditemukan</option>
+                                    <option value="Selesai">Selesai</option>
+                                </select>
+                            </div>                              
+                            <div class="form-group">
+                                <label for="lokasi">Lokasi<span class="required">*</span></label>
+                                <input type="text" id="lokasi" name="lokasi" placeholder="Contoh: Lab RPL, Kantin, Ruang B1/B2" required>
+                            </div>                      
+                            <div class="form-group">
+                                <label for="foto">Upload Foto<span class="required">*</span></label>
+                                <input type="file" id="foto" name="foto" accept="image/*" required>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Jenis Laporan</legend>
+                            <div class="form-group radio-group">
+                                <label>
+                                    <input type="radio" name="jenis" value="hilang" required>
+                                    Barang Hilang
+                                </label>
+                                <label>
+                                    <input type="radio" name="jenis" value="ditemukan">
+                                    Barang Ditemukan
+                                </label>
+                            </div>
+                        </fieldset>
+                        <div class="btn-group">
+                            <button type="submit" class="btn-primary">Kirim Laporan</button>
+                            <button type="reset" class="btn-reset">Reset</button>
                         </div>
-                        <div class="form-group">
-                            <label for="kontak">Kontak WA</label>
-                            <input type="text" id="kontak" name="kontak" placeholder="Contoh: 08xx" required>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Detail Barang</legend>
-                        <div class="form-group">
-                            <label for="barang">Nama Barang:</label>
-                            <input type="text" id="barang" name="barang" placeholder="Contoh: Dompet coklat, Laptop ASUS" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="deskripsi">Deskripsi:</label>
-                            <textarea id="deskripsi" name="deskripsi" rows="3" placeholder="Ciri-ciri khusus, isi dompet, warna, dll" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="lokasi">Lokasi:</label>
-                            <input type="text" id="lokasi" name="lokasi" placeholder="Contoh: Lab RPL, Kantin, Ruang B1/B2" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tanggal">Tanggal Lapor:</label>
-                            <input type="date" id="tanggal" name="tanggal" required>
-                        </div>                        
-                        <div class="form-group">
-                            <label for="foto">Upload Foto:</label>
-                            <input type="file" id="foto" name="foto" accept="image/*">
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Jenis Laporan</legend>
-                        <div class="form-group radio-group">
-                            <label>
-                                <input type="radio" name="jenis" value="hilang" required>
-                                Barang Hilang
-                            </label>
-                            <label>
-                                <input type="radio" name="jenis" value="ditemukan">
-                                Barang Ditemukan
-                            </label>
-                        </div>
-                    </fieldset>
-                    <div class="btn-group">
-                        <button type="submit" class="btn-primary">Kirim Laporan</button>
-                        <button type="reset" class="btn-reset">Reset</button>
-                    </div>
-                </form>
-            </section>
-        </main>
-    </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </section>
     <footer>
         <hr>
         <p>&copy; 2026 Proyek Pemrograman Web Fasilkom Jember</p>
         <p><small>Dibuat untuk memenuhi tugas mata kuliah Pemrograman Web</small></p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
